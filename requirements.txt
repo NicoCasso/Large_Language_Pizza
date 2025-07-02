@@ -1,6 +1,9 @@
 gradio
 
 chromadb
+
+PyPDF2
+
 langchain
 langchain-ollama
 langchain_community

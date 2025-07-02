@@ -1,11 +1,15 @@
 import gradio as gr
 
+from langchain_core.runnables import RunnableSerializable
+from typing import Any
+
 from camel_wrapper import LamaWrapper
 
 lama = LamaWrapper()
 
 def respond(message, history):
-    lama_answer = lama.rag_chain.invoke(message)
+    runnable_chain = lama.rag_chain
+    lama_answer = runnable_chain.invoke(message)
     return lama_answer 
 
 # Création de l'interface Gradio
