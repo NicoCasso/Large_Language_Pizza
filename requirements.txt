@@ -1,1 +1,6 @@
 gradio
+
+chromadb
+langchain
+langchain-ollama
+langchain_community
