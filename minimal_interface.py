@@ -9,8 +9,11 @@ lama = LamaWrapper()
 
 def respond(message, history):
     runnable_chain = lama.rag_chain
-    lama_answer = runnable_chain.invoke(message)
-    return lama_answer 
+    try :
+        lama_answer = runnable_chain.invoke(message)
+        return lama_answer 
+    except Exception as ex :
+        return str(ex)
 
 # Création de l'interface Gradio
 minim_inter_gradio = gr.ChatInterface(
