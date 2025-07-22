@@ -1,2 +1,2 @@
 # nothing special : 
-    just run minmal_interface.py
+    just run minimal_interface.py
